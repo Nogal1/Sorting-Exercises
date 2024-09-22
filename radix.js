@@ -4,8 +4,8 @@ Time Complexity: O(nk), where k is the number of digits in the largest number.
 Space Complexity: O(n + k)
 */
 
-function getDigit(num, place) {
-    return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
+function getDigit(num, i) {
+    return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
 }
 
 function digitCount(num) {
@@ -34,4 +34,5 @@ function radixSort(nums) {
     return nums;
 }
 
-module.exports = radixSort;
+
+module.exports = { getDigit, digitCount, mostDigits, radixSort };

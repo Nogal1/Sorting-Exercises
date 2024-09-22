@@ -8,15 +8,15 @@ function bubbleSort(arr) {
     for (let i = arr.length; i > 0; i--) {
         noSwaps = true;
         for (let j = 0; j < i - 1; j++) {
-            if (arr[j] > arr[j+i]) {
+            if (arr[j] > arr[j + 1]) {
                 // Swap
                 let temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
                 noSwaps = false;
             }
         }
-        // If no swaps were made, array is sorted
+        // If no swaps were made during this pass, exit the loop
         if (noSwaps) break;
     }
     return arr;
